@@ -1,0 +1,25 @@
+[package]
+name = "wasmcloud-provider-keyvalue-nats"
+version = "0.0.1"
+edition = "2021"
+description = """
+A capability provider that satisfies the 'wasmcloud:keyvalue' contract using NATS as a backend.
+"""
+
+[badges.maintenance]
+status = "actively-developed"
+
+[dependencies]
+anyhow = { version = "1", default-features = false }
+async-nats = { version = "0.33", default-features = false }
+base64 = { version = "0.21", default-features = false }
+bytes = { version = "1", default-features = false }
+futures = { version = "0.3", default-features = false }
+opentelemetry = { version = "0.22.0", default-features = false }
+opentelemetry-nats = { git = "https://github.com/wasmCloud/wasmCloud.git" }
+tokio = { version = "1", default-features = false }
+tracing = { version = "0.1", default-features = false }
+tracing-futures = { version = "0.2", default-features = false }
+tracing-opentelemetry = { version = "0.22.0", default-features = false }
+wascap = { version = "0.12.0" }
+wasmcloud-provider-wit-bindgen = { git = "https://github.com/wasmCloud/wasmCloud.git", features = ["otel"], default-features = false }
